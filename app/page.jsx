@@ -28,7 +28,7 @@ export default function Home() {
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row xl:justify-start">
               <Button size="lg" asChild className="flex items-center gap-2 bg-[var(--accent)] text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-black">
                 <Link
-                  href="/assets/resume/DakotaKing-2026Resume.pdf"
+                  href="/assets/resume/Dakota_King_Resume_Professional.pdf"
                   download
                   className="flex items-center gap-2"
                 >
