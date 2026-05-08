@@ -27,10 +27,12 @@ const projects = [
       { name: "React", color: "bg-sky-100 text-sky-700" },
       { name: "Next.js", color: "bg-gray-200 text-gray-900" },
       { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
+      { name: "Radix UI", color: "bg-red-200 text-black" },
+      { name: "Lucide React", color: "bg-yellow-100 text-black" },
     ],
     github: "https://github.com/DakotaK92/myPocketBard",
     live: "https://my-pocket-bard.vercel.app/",
-    isNew: true,
+    isNew: false,
   },
   {
     id: 2,
@@ -39,9 +41,15 @@ const projects = [
       "A mobile app concept for browsing events, tracking rewards, and making it easier for comic fans to stay connected with a local shop.",
     image: "/assets/work/design-image-1.jpg",
     tools: [
+      { name: "Expo", color: "bg-sky-100 text-sky-700" },
       { name: "React-Native", color: "bg-sky-100 text-sky-700" },
+      { name: "React", color: "bg-sky-100 text-sky-700" },
       { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
-      { name: "Clerk", color: "bg-green-200 text-green-700" },
+      { name: "Nativewind CSS", color: "bg-cyan-100 text-cyan-700" },
+      { name: "Clerk-Expo", color: "bg-red-200 text-black" },
+      { name: "Axios", color: "bg-yellow-100 text-black" },
+      { name: "Tanstack", color: "bg-purple-300 text-black" },
+      { name: "Expo-Image", color: "bg-pink-200 text-black" },
     ],
     github: "https://github.com/DakotaK92/DuncanvilleComics-ReactNative",
     live: "https://www.youtube.com/watch?v=NU1NDJTvKzg",
@@ -49,19 +57,21 @@ const projects = [
   },
   {
     id: 3,
-    title: "Dakota King Portfolio",
+    title: "Lick",
     description:
-      "A personal portfolio built to showcase both frontend development and design work through a more polished, brand-aware experience.",
-    image: "/assets/work/development-image-3.jpg",
+      "Lick is a playful ice cream brand website built with Next.js. The project showcases featured flavors, brand storytelling, rewards messaging, and a Where to Buy experience with a lightweight Google Maps-style locator.",
+    image: "/assets/work/design-image-2.jpg",
     tools: [
       { name: "React", color: "bg-sky-100 text-sky-700" },
       { name: "Next.js", color: "bg-gray-200 text-gray-900" },
       { name: "Tailwind CSS", color: "bg-cyan-100 text-cyan-700" },
+      { name: "Radix UI", color: "bg-red-200 text-black" },
+      { name: "Lucide React", color: "bg-yellow-100 text-black" },
     ],
     github: "https://github.com/DakotaK92/DakotaK92-Portfolio",
-    live: "https://dakotavking.dev",
-    isNew: false,
-  },
+    live: "https://lick-one.vercel.app/",
+    isNew: true,
+  }
 ];
 
 const designs = [
