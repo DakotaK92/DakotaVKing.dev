@@ -43,6 +43,7 @@ const MobileNav = () => {
             <SheetClose asChild key={index}>
               <Link
                 href={link.path}
+                aria-current={link.path === pathname ? "page" : undefined}
                 className={`w-full rounded-2xl px-4 py-3 text-center text-sm font-bold uppercase tracking-[0.2em] transition-all ${
                   link.path === pathname
                     ? "bg-[var(--accent)] text-[var(--button-text)]"

@@ -1,176 +1,266 @@
 import Link from "next/link";
-import { FiArrowRight, FiCode, FiLayers, FiPenTool, FiZap } from "react-icons/fi";
-
+import {
+  FiArrowRight,
+  FiCheck,
+  FiCode,
+  FiLayers,
+  FiPenTool,
+} from "react-icons/fi";
 import { Button } from "../../components/ui/button";
 
 const services = [
   {
-    title: "Frontend Development",
+    number: "01",
+    title: "Frontend development",
     description:
-      "Responsive marketing sites, portfolio builds, and interface-heavy pages that feel polished across desktop and mobile.",
+      "Turn a design or early idea into a responsive website that feels considered on every screen.",
     icon: <FiCode />,
-    points: ["Next.js builds", "Tailwind styling systems", "Performance-minded UI polish"],
+    examples: [
+      "Portfolio and marketing websites",
+      "Next.js page implementation",
+      "Responsive components and UI polish",
+    ],
   },
   {
-    title: "UI Design",
+    number: "02",
+    title: "UI design",
     description:
-      "Clean, brand-aware interfaces with better hierarchy, stronger rhythm, and a clearer user experience from the first screen.",
+      "Make the interface easier to understand, navigate, and use—with visual hierarchy that fits your brand.",
     icon: <FiLayers />,
-    points: ["Page structure and layout", "Component direction", "Design cleanup and refinement"],
+    examples: [
+      "Page structure and layout direction",
+      "Interface and component concepts",
+      "Visual cleanup for existing pages",
+    ],
   },
   {
-    title: "Brand + Visual Design",
+    number: "03",
+    title: "Brand & visual design",
     description:
-      "Visual systems that help small brands look more intentional, cohesive, and memorable across digital touchpoints.",
+      "Build a more cohesive visual presence with a distinct direction for your brand and its digital touchpoints.",
     icon: <FiPenTool />,
-    points: ["Logo exploration", "Color and typography direction", "Graphics for web presence"],
+    examples: [
+      "Logo and identity exploration",
+      "Color and typography direction",
+      "Graphics prepared for the web",
+    ],
   },
 ];
 
-const process = [
+const steps = [
   {
-    step: "01",
-    title: "Align",
+    number: "01",
+    title: "Share the brief",
     description:
-      "We start with your goals, audience, references, and the pieces that need the most improvement first.",
+      "Tell me about your goals, audience, references, and what you want to improve.",
   },
   {
-    step: "02",
-    title: "Shape",
+    number: "02",
+    title: "Set a direction",
     description:
-      "I turn that direction into cleaner structure, visual hierarchy, and a more confident presentation.",
+      "We agree on the right scope and focus on the most useful improvements first.",
   },
   {
-    step: "03",
-    title: "Refine",
+    number: "03",
+    title: "Make it real",
     description:
-      "We tighten spacing, interactions, copy, and responsiveness so the final result feels considered instead of rushed.",
+      "I shape, build, and refine the work, keeping communication clear along the way.",
   },
 ];
 
-const fit = [
-  "Personal portfolio sites and redesigns",
-  "Landing pages and brand-forward websites",
-  "UI cleanup for existing frontend projects",
-  "Design-to-code support for creative ideas",
+const goodFit = [
+  "You need a portfolio or landing page that better represents your work.",
+  "You have a website that needs clearer structure or a visual refresh.",
+  "You want design and development to work together instead of feeling disconnected.",
 ];
 
 export default function ServicesPage() {
   return (
-    <section className="page-shell py-12 xl:py-16">
+    <section className="page-shell py-10 md:py-14 xl:py-16">
       <div className="section-wrap">
-        <div className="glass-panel soft-grid overflow-hidden rounded-[2.5rem] p-8 md:p-10 xl:p-12">
-          <div className="grid items-start gap-10 xl:grid-cols-[1.1fr_0.9fr] xl:gap-14">
+        <header className="glass-panel soft-triangles overflow-hidden rounded-[2rem] p-6 sm:p-8 xl:p-10">
+          <div className="grid items-center gap-8 xl:grid-cols-[1.1fr_0.9fr] xl:gap-14">
             <div>
               <span className="section-kicker">Services</span>
-              <h1 className="section-title mt-5 max-w-4xl">
-                Design-forward web work for people who want their site to feel sharper, clearer, and more professional.
-              </h1>
-              <p className="section-copy mt-5 max-w-[700px]">
-                I help turn rough ideas, dated pages, and underwhelming layouts into portfolio sites and frontend experiences that feel more intentional. The focus is usually a mix of design cleanup, visual direction, and practical implementation.
+              <p className="mt-6 text-sm font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">
+                Thoughtful design, practical development
               </p>
-
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <h1 className="mt-3 max-w-3xl text-4xl font-black leading-tight tracking-tight text-[var(--text)] sm:text-5xl">
+                Make your next digital project feel more like you.
+              </h1>
+              <p className="section-copy mt-5 max-w-2xl">
+                I help turn ideas, existing designs, and websites that need a
+                refresh into polished digital experiences—with design and
+                frontend development working together.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[var(--accent)] text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-black"
+                  className="bg-[var(--accent)] text-[var(--button-text)] hover:bg-[var(--accent-hover)]"
                 >
                   <Link href="/contact" className="flex items-center gap-2">
-                    Start a Project
-                    <FiArrowRight className="text-lg" />
+                    Tell me about your project
+                    <FiArrowRight aria-hidden="true" />
                   </Link>
                 </Button>
-
                 <Button
                   asChild
                   size="lg"
-                  className="border border-[var(--border-soft)] bg-white/6 text-[var(--text)] shadow-none hover:-translate-y-0.5 hover:bg-white hover:text-black"
+                  className="border border-[var(--border-soft)] bg-white/5 text-[var(--text)] hover:bg-white/10"
                 >
-                  <Link href="/work">See My Work</Link>
+                  <Link href="/work">Explore selected work</Link>
                 </Button>
               </div>
             </div>
 
-            <aside className="solid-panel rounded-[2rem] p-6 md:p-8">
-              <div className="flex items-center gap-3 text-[var(--accent)]">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-2xl">
-                  <FiZap />
-                </div>
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--accent-text)]">Best Fit</p>
-                  <h2 className="mt-1 text-2xl font-black text-[var(--text)]">Projects I can help with</h2>
-                </div>
-              </div>
-
-              <ul className="mt-6 space-y-4">
-                {fit.map((item) => (
+            <aside className="solid-panel rounded-[1.75rem] p-6 sm:p-7">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--accent-text)]">
+                A good fit if…
+              </p>
+              <h2 className="mt-2 text-2xl font-black text-[var(--text)]">
+                You want your website to work harder for you.
+              </h2>
+              <ul className="mt-5 space-y-4">
+                {goodFit.map((item) => (
                   <li
                     key={item}
-                    className="rounded-[1.25rem] border border-[var(--border-soft)] bg-white/6 px-4 py-4 leading-7 text-[var(--muted-text)]"
+                    className="flex items-start gap-3 text-sm leading-6 text-[var(--muted-text)]"
                   >
-                    {item}
+                    <FiCheck
+                      className="mt-1 shrink-0 text-[var(--accent)]"
+                      aria-hidden="true"
+                    />
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </aside>
           </div>
-        </div>
+        </header>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {services.map((service) => (
-            <article key={service.title} className="glass-panel rounded-[2rem] p-6 md:p-7">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-2xl text-[var(--accent)]">
-                {service.icon}
-              </div>
-              <h2 className="mt-5 text-2xl font-black text-[var(--text)]">{service.title}</h2>
-              <p className="mt-3 leading-8 text-[var(--muted-text)]">{service.description}</p>
-              <ul className="mt-5 space-y-3 text-sm font-semibold uppercase tracking-[0.14em] text-[var(--accent-text)]">
-                {service.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-14 grid gap-8 xl:grid-cols-[0.9fr_1.1fr]">
-          <div className="glass-panel rounded-[2rem] p-7 md:p-8">
-            <span className="section-kicker">Process</span>
-            <h2 className="mt-5 text-3xl font-black text-[var(--text)]">A simple way of working that keeps momentum moving.</h2>
-            <p className="mt-4 leading-8 text-[var(--muted-text)]">
-              I like collaborative projects, but I also try to make the process easy to follow. The goal is to keep communication clear, move quickly on the highest-value improvements, and end up with work that feels stronger than where it started.
+        <section className="mt-14 md:mt-16" aria-labelledby="services-heading">
+          <div className="mb-7 max-w-2xl">
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">
+              How I can help
+            </p>
+            <h2
+              id="services-heading"
+              className="mt-2 text-3xl font-black text-[var(--text)] sm:text-4xl"
+            >
+              Pick a starting point.
+            </h2>
+            <p className="mt-3 leading-7 text-[var(--muted-text)]">
+              Bring a specific need or just the beginning of an idea—we can
+              shape the scope together.
             </p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {process.map((item) => (
-              <article key={item.step} className="solid-panel rounded-[2rem] p-6">
-                <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">{item.step}</p>
-                <h3 className="mt-4 text-2xl font-black text-[var(--text)]">{item.title}</h3>
-                <p className="mt-3 leading-7 text-[var(--muted-text)]">{item.description}</p>
+          <div className="grid gap-5 lg:grid-cols-3">
+            {services.map((service) => (
+              <article
+                key={service.number}
+                className="glass-panel group flex h-full flex-col rounded-[1.75rem] p-6 transition-transform hover:-translate-y-1 sm:p-7"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-2xl text-[var(--accent)]">
+                    {service.icon}
+                  </span>
+                  <span className="text-sm font-bold tracking-[0.18em] text-[var(--muted-text)]">
+                    {service.number}
+                  </span>
+                </div>
+                <h3 className="mt-5 text-2xl font-black text-[var(--text)]">
+                  {service.title}
+                </h3>
+                <p className="mt-3 min-h-[5.5rem] leading-7 text-[var(--muted-text)]">
+                  {service.description}
+                </p>
+                <div className="mt-5 border-t border-[var(--border-soft)] pt-5">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--accent-text)]">
+                    Could include
+                  </p>
+                  <ul className="mt-4 space-y-3">
+                    {service.examples.map((example) => (
+                      <li
+                        key={example}
+                        className="flex items-start gap-3 text-sm leading-6 text-[var(--muted-text)]"
+                      >
+                        <FiCheck
+                          className="mt-1 shrink-0 text-[var(--accent)]"
+                          aria-hidden="true"
+                        />
+                        <span>{example}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </article>
             ))}
           </div>
-        </div>
+        </section>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div className="glass-panel rounded-[2rem] p-7 md:p-8">
-            <span className="section-kicker">Next Step</span>
-            <h2 className="mt-5 text-3xl font-black text-[var(--text)]">If you already know what you need, we can start with a quick message.</h2>
-            <p className="mt-4 max-w-3xl leading-8 text-[var(--muted-text)]">
-              Send over what you are building, what feels off right now, and whether you need design, development, or both. I can help scope the right direction from there.
+        <section
+          className="mt-14 grid gap-6 lg:mt-16 lg:grid-cols-[0.8fr_1.2fr]"
+          aria-labelledby="process-heading"
+        >
+          <div className="glass-panel rounded-[1.75rem] p-6 sm:p-8">
+            <span className="section-kicker">The process</span>
+            <h2
+              id="process-heading"
+              className="mt-5 text-3xl font-black text-[var(--text)]"
+            >
+              Clear steps, thoughtful details.
+            </h2>
+            <p className="mt-4 leading-7 text-[var(--muted-text)]">
+              No guesswork about what happens next. We start with the problem,
+              agree on a useful direction, and refine the details together.
             </p>
           </div>
+          <ol className="grid gap-4 sm:grid-cols-3">
+            {steps.map((step) => (
+              <li
+                key={step.number}
+                className="solid-panel rounded-[1.5rem] p-5 sm:p-6"
+              >
+                <p className="text-sm font-bold tracking-[0.2em] text-[var(--accent-text)]">
+                  {step.number}
+                </p>
+                <h3 className="mt-4 text-xl font-black text-[var(--text)]">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted-text)]">
+                  {step.description}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </section>
 
+        <section className="glass-panel mt-14 flex flex-col gap-5 rounded-[1.75rem] p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--accent-text)]">
+              Have something in mind?
+            </p>
+            <h2 className="mt-2 text-2xl font-black text-[var(--text)] sm:text-3xl">
+              Tell me what you&apos;re working on.
+            </h2>
+            <p className="mt-3 leading-7 text-[var(--muted-text)]">
+              Share what you need, what feels unfinished, or where you&apos;d like
+              to go next. We can figure out the right first step together.
+            </p>
+          </div>
           <Button
             asChild
             size="lg"
-            className="h-fit bg-[var(--accent)] px-7 text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] p-4 font-bold"
+            className="shrink-0 bg-[var(--accent)] text-[var(--button-text)] hover:bg-[var(--accent-hover)]"
           >
-            <Link href="/contact">Contact Me</Link>
+            <Link href="/contact" className="flex items-center gap-2">
+              Start a conversation
+              <FiArrowRight aria-hidden="true" />
+            </Link>
           </Button>
-        </div>
+        </section>
       </div>
     </section>
   );

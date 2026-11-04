@@ -16,10 +16,10 @@ const roboto = Roboto({
 export const metadata = {
   metadataBase: new URL("https://dakotavking.dev"),
   title: {
-    default: "Dakota King | Portfolio",
+    default: "Dakota King — Designer & Developer",
     template: "%s | Dakota King",
   },
-  description: "Welcome to my portfolio website! I'm Dakota, a passionate developer and designer. Explore my projects, skills, and experience in web development. Let's create something amazing together!",
+  description: "Dakota King is a designer and full-stack developer creating thoughtful brands, clear interfaces, and useful digital experiences.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -29,8 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${roboto.className} ${roboto.variable}`}>
+        <a className="skip-link" href="#main-content">Skip to content</a>
         <Header />
-        <main>
+        <main id="main-content">
           {children}
         </main>
         <Footer />

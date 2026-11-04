@@ -25,10 +25,11 @@ const Nav = () => {
           <Link
             href={link.path}
             key={link.path}
+            aria-current={isActive ? "page" : undefined}
             className={`rounded-full px-4 py-2 capitalize text-sm font-bold tracking-[0.14em] transition-all ${
               isActive
                 ? "bg-[var(--accent)] text-[var(--button-text)] shadow-lg"
-                : "text-[var(--text)]/80 hover:bg-white/50 hover:text-[var(--text)] dark:hover:bg-white/8"
+                : "text-[var(--text)]/80 hover:bg-white/10 hover:text-[var(--text)]"
             }`}
           >
             {link.name}
