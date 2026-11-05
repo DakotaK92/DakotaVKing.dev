@@ -14,6 +14,8 @@ import {
   SiTailwindcss,
   SiNextdotjs,
 } from "react-icons/si";
+import { FaFigma } from "react-icons/fa6";
+import { DiIllustrator } from "react-icons/di";
 import { Button } from "../../components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../components/ui/tabs";
 
@@ -41,7 +43,7 @@ const experience = [
   {
     company: "Signarama",
     location: "McKinney, TX",
-    position: "Graphic Design and Production",
+    position: "Graphic Design & Production",
     duration: "May 2021 – August 2021",
   },
   {
@@ -84,6 +86,16 @@ const skills = [
     name: "Adobe Creative Cloud",
     group: "Design",
   },
+  {
+    icon: <FaFigma />,
+    name: "Figma",
+    group: "Design",
+  },
+  {
+    icon: <DiIllustrator />,
+    name: "Adobe Illustrator",
+    group: "Design",
+  }
 ];
 
 const about = {
@@ -119,9 +131,9 @@ const Resume = () => {
                 size="lg"
                 className="bg-[var(--accent)] text-[var(--button-text)] hover:bg-[var(--accent-hover)]"
               >
-                <Link href={resumeUrl} download className="flex items-center gap-2">
+                <Link href={resumeUrl} download className="flex items-center gap-2 bg-[var(--accent)] text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-black">
                   <FiDownload aria-hidden="true" />
-                  Download PDF
+                  Download Resume
                 </Link>
               </Button>
               <Button

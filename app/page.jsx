@@ -5,6 +5,7 @@ import { Button } from "../components/ui/button";
 import Photo from "../components/Photo";
 import Social from "../components/Social";
 import Stats from "../components/Stats";
+import { blogNotesNewestFirst } from "../lib/blog-notes";
 
 const featuredWork = [
   {
@@ -46,10 +47,10 @@ export default function Home() {
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--accent-text)]">
             Designer <span className="px-1 text-[var(--muted-text)]">/</span> Developer
           </p>
-          <h1 className="mt-5 text-5xl font-black leading-[1.04] tracking-[-0.055em] sm:text-6xl xl:text-[4.5rem]">
-            I make the
-            <br className="hidden sm:block" /> digital feel
-            <span className="block text-[var(--accent)]"> a little more human.</span>
+          <h1 className="mt-5 text-5xl font-black leading-[1.04] sm:text-6xl xl:text-[4.5rem]">
+            Design.
+            <br className="hidden"/> Develop.
+            <span className="text-[var(--accent)]"> Polish.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-[590px] text-lg leading-8 text-[var(--muted-text)] xl:mx-0">
             I&apos;m Dakota King, a designer and full-stack developer creating thoughtful brands, clear interfaces, and useful experiences for the web.
@@ -153,6 +154,86 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="section-wrap pb-16 md:pb-24" aria-labelledby="blog-title">
+        <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.28em] text-[var(--accent-text)]">
+              Life lately - thoughts, ideas, and things I&apos;ve been making
+            </p>
+            <h2 id="blog-title" className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
+              Blog.
+            </h2>
+            <p className="mt-3 leading-7 text-[var(--muted-text)]">
+              A few moments, ideas, and things I&apos;ve been making along the way.
+            </p>
+          </div>
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 self-start text-sm font-bold text-[var(--muted-text)] hover:text-[var(--accent)] md:self-auto"
+          >
+            Browse the blog <FiArrowRight aria-hidden="true" />
+          </Link>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          {blogNotesNewestFirst.map((note) => (
+            <article key={note.slug} className="glass-panel overflow-hidden rounded-[1.75rem]">
+              <Link
+                href={`/blog/${note.slug}`}
+                aria-label={`Read ${note.title}`}
+                className="group block"
+              >
+              <div className="relative aspect-[1.8] overflow-hidden bg-[var(--panel-strong)]">
+                <Image
+                  src={note.images?.[0]?.src ?? note.image}
+                  alt={note.images?.[0]?.alt ?? note.imageAlt}
+                  fill
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-5 sm:p-6">
+                <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em]">
+                  <span className="text-[var(--accent-text)]">{note.category}</span>
+                  <span className="h-1 w-1 rounded-full bg-[var(--muted-text)]" aria-hidden="true" />
+                  <time className="text-[var(--muted-text)]" dateTime={note.date}>
+                    {note.date}
+                  </time>
+                </div>
+                <h3 className="mt-3 text-xl font-black text-[var(--text)] sm:text-2xl">
+                  {note.title}
+                </h3>
+                <p className="mt-2 leading-7 text-[var(--muted-text)]">{note.excerpt}</p>
+              </div>
+              </Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-wrap pb-16 md:pb-24" aria-labelledby="shop-concept-title">
+        <div className="glass-panel soft-triangles flex flex-col gap-6 overflow-hidden rounded-[2rem] p-7 md:flex-row md:items-center md:justify-between md:gap-10 md:p-10">
+          <div className="max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.28em] text-[var(--accent-text)]">
+              A little something in the works
+            </p>
+            <h2 id="shop-concept-title" className="mt-3 text-2xl font-black sm:text-3xl">
+              What if my designs had a shop of their own?
+            </h2>
+            <p className="mt-3 leading-7 text-[var(--muted-text)]">
+              Take a look at a storefront concept I&apos;m exploring—part design
+              showcase, part hands-on Shopify learning project.
+            </p>
+          </div>
+          <Link
+            href="/shop-preview"
+            className="inline-flex min-h-12 w-fit shrink-0 items-center gap-2 rounded-full bg-[var(--accent)] px-6 font-bold text-[var(--button-text)] hover:bg-[var(--accent-hover)] hover:text-black"
+          >
+            View shop concept <FiArrowRight aria-hidden="true" />
+          </Link>
         </div>
       </section>
 

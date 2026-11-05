@@ -85,6 +85,11 @@ textarea:focus-visible,
     scroll-behavior: auto;
   }
 
+  .photo-progress {
+    animation: none;
+    transform: scaleX(1);
+  }
+
   *,
   *::before,
   *::after {
@@ -92,6 +97,25 @@ textarea:focus-visible,
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+@keyframes photo-progress {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.photo-progress {
+  animation: photo-progress 4s linear forwards;
+  transform-origin: right center;
+}
+
+.photo-progress-paused {
+  animation-play-state: paused;
 }
 
 @layer base {
