@@ -57,7 +57,7 @@ function SheetContent({
       <SheetPrimitive.Content
         data-slot="sheet-content"
         className={cn(
-          "bg-blue-900 data-[state=open]:animate-in data-[state=closed]:animate-out fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+          "bg-[var(--background)] text-[var(--text)] data-[state=open]:animate-in data-[state=closed]:animate-out fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
           side === "right" &&
             "data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right inset-y-0 right-0 h-full w-3/4 sm:max-w-sm",
           side === "left" &&
@@ -71,8 +71,9 @@ function SheetContent({
         {...props}>
         {children}
         <SheetPrimitive.Close
-          className="absolute right-8 top-8 transition-opacity outline-none bg-blue-950 cursor-pointer">
-          <IoMdClose className="text-3xl text-white" />
+          aria-label="Close navigation menu"
+          className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-soft)] bg-[var(--panel)] text-[var(--accent)] outline-none transition-all hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--button-text)]">
+          <IoMdClose className="text-2xl" aria-hidden="true" />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>
