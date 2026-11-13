@@ -41,7 +41,7 @@ export default function Home() {
         <div className="order-1 text-center xl:order-none xl:text-left">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-soft)] bg-[var(--panel)] px-4 py-2 text-sm font-medium text-[var(--muted-text)]">
             <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.65)]" />
-            Available for select projects
+            Available for projects
           </div>
 
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--accent-text)]">
@@ -214,29 +214,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-wrap pb-16 md:pb-24" aria-labelledby="shop-concept-title">
-        <div className="glass-panel soft-triangles flex flex-col gap-6 overflow-hidden rounded-[2rem] p-7 md:flex-row md:items-center md:justify-between md:gap-10 md:p-10">
-          <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.28em] text-[var(--accent-text)]">
-              A little something in the works
-            </p>
-            <h2 id="shop-concept-title" className="mt-3 text-2xl font-black sm:text-3xl">
-              What if my designs had a shop of their own?
-            </h2>
-            <p className="mt-3 leading-7 text-[var(--muted-text)]">
-              Take a look at a storefront concept I&apos;m exploring—part design
-              showcase, part hands-on Shopify learning project.
-            </p>
-          </div>
-          <Link
-            href="/shop-preview"
-            className="inline-flex min-h-12 w-fit shrink-0 items-center gap-2 rounded-full bg-[var(--accent)] px-6 font-bold text-[var(--button-text)] hover:bg-[var(--accent-hover)] hover:text-black"
-          >
-            View shop concept <FiArrowRight aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
-
       <section className="section-wrap pb-16 md:pb-24" aria-labelledby="approach-title">
         <div className="glass-panel soft-triangles overflow-hidden rounded-[2rem] p-7 md:flex md:items-center md:justify-between md:gap-10 md:p-10">
           <div className="max-w-2xl">
@@ -255,7 +232,12 @@ export default function Home() {
             size="lg"
             className="mt-6 shrink-0 bg-[var(--accent)] text-[var(--button-text)] hover:bg-[var(--accent-hover)] hover:text-black md:mt-0"
           >
-            <Link href="/services">How I can help</Link>
+            <Link 
+              href="/services" 
+              className="font-bold"
+            >
+              How I can help
+            </Link>
           </Button>
         </div>
       </section>

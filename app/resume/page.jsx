@@ -48,7 +48,7 @@ const experience = [
   {
     company: "FASTSIGNS",
     location: "Lakeland, FL",
-    position: "Graphic Design & Production",
+    position: "Graphic Designer & Production",
     duration: "March 2025 – September 2025",
     highlights: [
       "Designed and produced event signage, building graphics, and convention backdrops from customer brief through final production.",
@@ -70,7 +70,7 @@ const experience = [
   {
     company: "Sign-A-Rama",
     location: "McKinney, TX",
-    position: "Graphic Designer",
+    position: "Graphic Designer & Production",
     duration: "May 2021 – August 2021",
     highlights: [
       "Created signage, event and building graphics, and convention banners from concept through production.",
@@ -161,7 +161,7 @@ const projects = [
     ],
   },
   {
-    name: "DakotaVKing.dev",
+    name: "DakotaVKing.com",
     stack: "Next.js · Tailwind CSS · React · Radix UI · Resend",
     highlights: [
       "Brought portfolio, resume, services, and contact information together in a polished, professional website.",
@@ -193,7 +193,7 @@ const Resume = () => {
               </h1>
               <p className="section-copy mt-4">
                 Explore my experience, education, projects, and skills—or
-                download the latest resume.
+                download my latest resume.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row md:shrink-0">
@@ -208,7 +208,7 @@ const Resume = () => {
                   className="flex items-center gap-2 bg-[var(--accent)] text-[var(--button-text)] shadow-lg hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:text-black"
                 >
                   <FiDownload aria-hidden="true" />
-                  Download Resume
+                  Download my Resume
                 </Link>
               </Button>
               <Button
@@ -224,7 +224,7 @@ const Resume = () => {
           <Tabs defaultValue="experience" className="mt-7">
             <TabsList
               aria-label="Resume sections"
-              className="grid w-full grid-cols-2 gap-1 rounded-2xl p-1 sm:grid-cols-5"
+              className="grid w-full grid-cols-2 gap-2 rounded-2xl p-1 sm:grid-cols-5"
             >
               <TabsTrigger value="experience">Experience</TabsTrigger>
               <TabsTrigger value="education">Education</TabsTrigger>
@@ -243,7 +243,7 @@ const Resume = () => {
                 {experience.map((item) => (
                   <li
                     key={`${item.company}-${item.location}-${item.duration}`}
-                    className="glass-panel rounded-2xl p-5 transition-transform hover:-translate-y-0.5 sm:p-6"
+                    className="glass-panel rounded-2xl p-5 sm:p-6"
                   >
                     <p className="text-sm font-bold text-[var(--accent-text)]">
                       {item.duration}

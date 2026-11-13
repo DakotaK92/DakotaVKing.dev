@@ -18,14 +18,14 @@ const photos = [
   },
   {
     src: "/assets/dk-mouse.jpg",
-    alt: "Dakota with Mickey Mouse at Walt Disney World",
-    caption: "A day at Walt Disney World",
+    alt: "Dakota with Mickey Mouse at Cool Kids Summer",
+    caption: "Mickey Mouse at Cool Kids Summer",
     imageStyle: "object-cover object-[center_38%]",
   },
   {
     src: "/assets/dk-tower.jpg",
-    alt: "Dakota at Disney's Hollywood Studios",
-    caption: "At Hollywood Studios",
+    alt: "Dakota at work in Disney's Hollywood Studios",
+    caption: "Working at Disney's Hollywood Studios",
     imageStyle: "object-cover object-[center_30%]",
   },
 ];

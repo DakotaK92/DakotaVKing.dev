@@ -296,7 +296,7 @@ export default function Works() {
         <Tabs defaultValue="all" className="gap-7">
           <TabsList
             aria-label="Filter projects by category"
-            className="grid w-full max-w-[520px] grid-cols-3 rounded-2xl p-1"
+            className="grid w-full max-w-[520px] grid-cols-3 gap-2 rounded-2xl p-1"
           >
             <TabsTrigger value="all">All work</TabsTrigger>
             <TabsTrigger value="development">Development</TabsTrigger>
